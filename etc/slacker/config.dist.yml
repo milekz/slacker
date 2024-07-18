@@ -8,13 +8,15 @@
 #
 # Each rule in list tested in order. First matched rule is used to update
 # values from 'default' section with its 'options' subsection.
+# Ensure your includes a mattermost_webhook_url field under each rule's options.
+# The field should be a URL to the Mattermost webhook endpoint.
 ######
 
 default:
     channel: '#general'
     username: slacker
     icon_url: ''
-    slack_token: xoxb-00000000000-aaaaaaaaaaaaaaaaaaaaaaaa
+    mattermost_webhook_url: 
     debug: false
     format: "subject: %(subject)s; body: %(body)s"  ## default slack message format
 
